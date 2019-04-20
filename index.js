@@ -77,6 +77,10 @@ let crawl = (url, selector) => {
     })
 }
 
+App.get('/health', (req, res) => res.json({
+    message: 'healthy'
+}))
+
 App.post('/check', (req, res) => {
     let url = req.body.url
     let selector = req.body.selector
