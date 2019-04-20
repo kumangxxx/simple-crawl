@@ -8,6 +8,9 @@ let bp = require('body-parser')
 
 App.use(bp.json())
 
+let morgan = require('morgan')
+App.use(morgan('common'))
+
 let key = 'kumang'
 let crypto = require('crypto')
 
